@@ -13,7 +13,7 @@ function Movie({ id, coverImg, title, summary, genres }) {
           <li key={g}>{g}</li>;
         })}
       </ul>
-      <p>{summary}</p>
+      <p>{summary.length > 235 ? `${summary.slice(0, 230)} ...` : summary}</p>
     </div>
   );
 }
